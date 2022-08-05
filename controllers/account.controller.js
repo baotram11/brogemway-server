@@ -30,7 +30,16 @@ AccountController = {
                     .json({ error: 'Account does not exist!' });
             }
 
-            res.send(result);
+            return res.status(200).send({
+				account: {
+					ID: result._id,
+					PhoneNumber: result.PhoneNumber,
+					Name: result.Name,
+					Email: result.Email,
+					IsActive: result.IsActive,
+					Level: result.Level,
+				},
+			});
         } catch (error) {
             res.status(400).json('Error: ' + error);
             next();

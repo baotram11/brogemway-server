@@ -13,19 +13,19 @@ const verifyToken = (req, res, next) => {
                 });
             }
             req.user = user;
-            next();
+            return next();
         });
     } else {
-        res.status(401).json('You are not authenticated!');
+        return res.status(401).json('You are not authenticated!');
     }
 };
 
 const verifyTokenAndUserAuthorization = (req, res, next) => {
     verifyToken(req, res, () => {
         if (req.user.id === req.params.id || req.user.role === 'admin') {
-            next();
+            return next();
         } else {
-            res.status(403).json("You're not allowed to do that!");
+            return res.status(403).json("You're not allowed to do that!");
         }
     });
 };
@@ -33,9 +33,9 @@ const verifyTokenAndUserAuthorization = (req, res, next) => {
 const verifyTokenAndAdmin = (req, res, next) => {
     verifyToken(req, res, () => {
         if (req.user.role === 'admin') {
-            next();
+            return next();
         } else {
-            res.status(403).json(
+            return res.status(403).json(
                 'You are not authorized to perform this action!'
             );
         }

@@ -11,7 +11,7 @@ const {
 router.get('/', verifyTokenAndAdmin, AccountController.getAllAccounts);
 
 //Get an Account by UserID
-router.get('/:id', verifyToken, AccountController.findAccountById);
+router.get('/:id', verifyTokenAndUserAuthorization, AccountController.findAccountById);
 
 //Update an Account by UserID
 router.patch('/:id', verifyTokenAndUserAuthorization, AccountController.updateAccount);
