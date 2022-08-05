@@ -1,0 +1,92 @@
+[
+    {
+        "Name": "Nguyễn Đức Quân",
+        "PhoneNumber": "0909123123",
+        "Email": "ndquan@gmail.com",
+        "Address": "456/1 Trương Định, Phường 1, Quận 3, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1983-12-22T00:00:00.000+0000"
+    },
+    {
+        "Name": "Nguyễn Văn An",
+        "PhoneNumber": "0969814449",
+        "Email": "nvan@gmail.com",
+        "Address": "234 Nguyễn Văn Linh, Phường Hiệp Bình Phước, Quận Thủ Đức, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1990-01-19T00:00:00.000+0000"
+    },
+    {
+        "Name": "Trần Thanh Như",
+        "PhoneNumber": "0394253123",
+        "Email": "ttnhu@gmail.com",
+        "Address": "77 Võ Thị Sáu, Phường 2, Quận 3, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1987-12-27T00:00:00.000+0000"
+    },
+    {
+        "Name": "Trần Văn Đức",
+        "PhoneNumber": "0761127023",
+        "Email": "tvduc@gmail.com",
+        "Address": "64 Lê Trọng Tấn, Phường Tân Quý, Quận Tân Phú, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1989-04-11T00:00:00.000+0000"
+    },
+    {
+        "Name": "Phạm Đăng Phú",
+        "PhoneNumber": "0375812786",
+        "Email": "pdphu@gmail.com",
+        "Address": "34 Quang Trung, Phường 3, Quận Gò Vấp, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1979-12-23T00:00:00.000+0000"
+    },
+    {
+        "Name": "Hoàng Gia Bảo",
+        "PhoneNumber": "0866901801",
+        "Email": "hgbao@gmail.com",
+        "Address": "304 Ung Văn Khiêm, Phường 11, Quận Bình Thạnh, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1992-12-28T00:00:00.000+0000"
+    },
+    {
+        "Name": "Lê Hoàng Bảo Nam",
+        "PhoneNumber": "0369634889",
+        "Email": "lhbnam@gmail.com",
+        "Address": "11 Tôn Thất Tùng, Phường Phạm Ngũ Lão, Quận 1, TP. Hồ Chí Minh",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1997-12-22T00:00:00.000+0000"
+    },
+    {
+        "Name": "Cao Hoàng Ánh Duyên",
+        "PhoneNumber": "0328373723",
+        "Email": "chaduyen@gmail.com",
+        "Address": "45 Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1999-12-21T00:00:00.000+0000"
+    },
+    {
+        "Name": "Nguyễn Minh Bảo",
+        "PhoneNumber": "0911111222",
+        "Email": "nmbao@gmail.com",
+        "Address": "495A Cách Mạng Tháng Tám, Phường 3, Quận 10, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1995-12-27T00:00:00.000+0000"
+    },
+    {
+        "Name": "Lê Tấn Đăng Tâm",
+        "PhoneNumber": "0798181991",
+        "Email": "ntdtam@gmail.com",
+        "Address": "28 Trương Công Định, Phường 14, Quận Tân Bình, TPHCM",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "1990-12-13T00:00:00.000+0000"
+    },
+    {
+        "Name": "Nguyễn Bảo Trâm",
+        "PhoneNumber": "0981641111",
+        "Email": "baotramnguyen101@gmail.com",
+        "Address": "227 Nguyễn Văn Cừ, Phường 4, Quận 5, TPHCM",
+        "IsActive": true,
+        "Level": "admin",
+        "Password": "$2b$10$.G7JcY2rIhuXpLfyTEa1Z.UrSEA3jvXolcM/gCaEkVkUK4bcqoVni",
+        "DoB": "2001-11-11T11:11:11.000+0000"
+    }
+]

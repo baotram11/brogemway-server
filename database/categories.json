@@ -1,0 +1,26 @@
+[
+    {
+        "CatID": "1",
+        "CatName": "Điện thoại"
+    },
+    {
+        "CatID": "2",
+        "CatName": "Máy tính bảng/Laptop"
+    },
+    {
+        "CatID": "3",
+        "CatName": "Thời trang"
+    },
+    {
+        "CatID": "4",
+        "CatName": "Balo/Túi xách"
+    },
+    {
+        "CatID": "5",
+        "CatName": "Giày thể thao"
+    },
+    {
+        "CatID": "6",
+        "CatName": "Giày tây"
+    }
+]

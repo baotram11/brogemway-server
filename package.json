@@ -1,5 +1,5 @@
 {
-    "name": "backend",
+    "name": "brogemway-server",
     "version": "1.0.0",
     "description": "This is the server of Brogemway App",
     "main": "server.js",
