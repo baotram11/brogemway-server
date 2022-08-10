@@ -55,6 +55,7 @@ const AuthController = {
 					Email: result.Email,
 					IsActive: result.IsActive,
 					Level: result.Level,
+					CreatedAt: new Date(result.createdAt).toLocaleString(),
 				},
 			});
 		} catch (error) {

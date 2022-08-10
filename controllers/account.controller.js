@@ -1,36 +1,34 @@
 const Account = require('../models/account.model');
 
 AccountController = {
-    getAllAccounts: async (req, res, next) => {
-        try {
-            const results = await Account.find();
+	getAllAccounts: async (req, res, next) => {
+		try {
+			const results = await Account.find();
 
-            var length = Object.keys(results).length;
+			var length = Object.keys(results).length;
 
-            if (!length) {
-                return res.status(404).json({ error: 'No accounts found!' });
-            }
-            res.send(results);
-        } catch (error) {
-            res.status(400).json('Error: ' + error);
-            next();
-        }
-    },
+			if (!length) {
+				return res.status(404).json({ error: 'No accounts found!' });
+			}
+			res.send(results);
+		} catch (error) {
+			res.status(400).json('Error: ' + error);
+			next();
+		}
+	},
 
-    findAccountById: async (req, res, next) => {
-        const id = req.params.id;
-        try {
-            const result = await Account.findById(id);
+	findAccountById: async (req, res, next) => {
+		const id = req.params.id;
+		try {
+			const result = await Account.findById(id);
 
-            var length = Object.keys(result).length;
+			var length = Object.keys(result).length;
 
-            if (!length) {
-                return res
-                    .status(404)
-                    .json({ error: 'Account does not exist!' });
-            }
+			if (!length) {
+				return res.status(404).json({ error: 'Account does not exist!' });
+			}
 
-            return res.status(200).send({
+			return res.status(200).send({
 				account: {
 					ID: result._id,
 					PhoneNumber: result.PhoneNumber,
@@ -38,75 +36,71 @@ AccountController = {
 					Email: result.Email,
 					IsActive: result.IsActive,
 					Level: result.Level,
+					CreatedAt: new Date(result.createdAt).toLocaleString(),
+					UpdateAt: new Date(result.updatedAt).toLocaleString(),
 				},
 			});
-        } catch (error) {
-            res.status(400).json('Error: ' + error);
-            next();
-        }
-    },
+		} catch (error) {
+			res.status(400).json('Error: ' + error);
+			next();
+		}
+	},
 
-    updateAccount: async (req, res, next) => {
-        try {
-            const id = req.params.id;
-            const updates = req.body;
+	updateAccount: async (req, res, next) => {
+		try {
+			const id = req.params.id;
+			const updates = req.body;
 
-            const result = await Account.findByIdAndUpdate(id, updates);
+			const result = await Account.findByIdAndUpdate(id, updates);
 
-            if (!result) {
-                return res
-                    .status(404)
-                    .json({ error: 'Account does not exist!' });
-            }
+			if (!result) {
+				return res.status(404).json({ error: 'Account does not exist!' });
+			}
 
-            res.send({ status: 'updated' });
-        } catch (error) {
-            res.status(400).json({ error: error.message });
-            next();
-        }
-    },
+			res.send({ status: 'updated' });
+		} catch (error) {
+			res.status(400).json({ error: error.message });
+			next();
+		}
+	},
 
-    lockAccount: async (req, res, next) => {
-        const id = req.params.id;
+	lockAccount: async (req, res, next) => {
+		const id = req.params.id;
 
-        try {
-            const result = await Account.findByIdAndUpdate(id, {
-                IsActive: false,
-            });
+		try {
+			const result = await Account.findByIdAndUpdate(id, {
+				IsActive: false,
+			});
 
-            if (!result) {
-                return res
-                    .status(404)
-                    .json({ error: 'Account does not exist!' });
-            }
+			if (!result) {
+				return res.status(404).json({ error: 'Account does not exist!' });
+			}
 
-            res.send(`Locked the Account: ${id} !!`);
-        } catch (error) {
-            res.status(400).json({ error: error.message });
-            next();
-        }
-    },
+			res.send(`Locked the Account: ${id} !!`);
+		} catch (error) {
+			res.status(400).json({ error: error.message });
+			next();
+		}
+	},
 
-    unlockAccount: async (req, res, next) => {
-        const id = req.params.id;
+	unlockAccount: async (req, res, next) => {
+		const id = req.params.id;
 
-        try {
-            const result = await Account.findByIdAndUpdate(id, {
-                IsActive: true,
-            });
+		try {
+			const result = await Account.findByIdAndUpdate(id, {
+				IsActive: true,
+			});
 
-            if (!result) {
-                return res
-                    .status(404)
-                    .json({ error: 'Account does not exist!' });
-            }
+			if (!result) {
+				return res.status(404).json({ error: 'Account does not exist!' });
+			}
 
-            res.send(`Activated the account: ${id} !!`);
-        } catch (error) {
-            res.status(400).json({ error: error.message });
-            next();
-        }
-    },
+			res.send(`Activated the account: ${id} !!`);
+		} catch (error) {
+			res.status(400).json({ error: error.message });
+			next();
+		}
+	},
 };
 
 module.exports = AccountController;
