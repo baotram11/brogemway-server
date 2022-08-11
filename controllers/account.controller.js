@@ -35,6 +35,7 @@ AccountController = {
 					Name: result.Name,
 					Email: result.Email,
 					IsActive: result.IsActive,
+					Address: result.Address,
 					Level: result.Level,
 					CreatedAt: new Date(result.createdAt).toLocaleString(),
 					UpdateAt: new Date(result.updatedAt).toLocaleString(),
